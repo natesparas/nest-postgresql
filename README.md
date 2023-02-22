@@ -6,12 +6,10 @@ This is a sample project showcasing Devcontainer and AWS Lambda using LocalStack
 
 Make sure you have postgres container setup on your machine
 
-## Change the .env file base on your postgres container setup
+## Change the database url found in .env file base on your postgres container setup
 
 ```
-container name: postgres
-user: postgres
-password: postgres
+postgresql://<user>:<password>@<host>:<port>/nest-db?schema=public
 ```
 
 ## Running the app
