@@ -2,8 +2,15 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node-postgres
 {
 	"name": "Node.js & PostgreSQL",
-	"dockerComposeFile": "docker-compose.yml",
-	"service": "app",
+	// "dockerComposeFile": "docker-compose.yml",
+	// "service": "app",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick a Node version: 18, 16, 14.
+		// Append -bullseye or -buster to pin to an OS version.
+		// Use -bullseye variants on local arm64/Apple Silicon.
+		"args": { "VARIANT": "18-bullseye" }
+	},
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
@@ -19,23 +26,28 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "yarn install",
+	"postCreateCommand": "bash $(pwd)/.devcontainer/post-install.sh",
 
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
 			"settings": {
-				"workbench.colorTheme": "Abyss",
+				"workbench.colorTheme": "Monokai Dimmed",
 				"thunder-client.saveToWorkspace": true
 			},
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"dbaeumer.vscode-eslint",
 				"GitLab.gitlab-workflow",
-				"Prisma.prisma"
+				"Prisma.prisma",
+				"rangav.vscode-thunder-client"
 			]
 		}
 
-	}
+	},
+	"runArgs": [
+		"--network=localstack_default"
+	]
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
