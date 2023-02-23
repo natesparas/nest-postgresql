@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "ce3f5ecb-76b4-4601-aba9-b300809154eb",
+		"name": "Nest-PostgreSQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9240689"
+	},
+	"item": [
+		{
+			"name": "List of articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4566/restapis/2sb0k24e1a/local/_user_request_/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4566",
+					"path": [
+						"restapis",
+						"2sb0k24e1a",
+						"local",
+						"_user_request_",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert new article",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Iron Man 2\",\r\n  \"description\": \"Marvel Studio\",\r\n  \"body\": \"string\",\r\n  \"published\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4566/restapis/2sb0k24e1a/local/_user_request_/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4566",
+					"path": [
+						"restapis",
+						"2sb0k24e1a",
+						"local",
+						"_user_request_",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get article details by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4566/restapis/2sb0k24e1a/local/_user_request_/articles/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4566",
+					"path": [
+						"restapis",
+						"2sb0k24e1a",
+						"local",
+						"_user_request_",
+						"articles",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update article details",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Iron Man 2\",\r\n  \"description\": \"Marvel Studio\",\r\n  \"body\": \"string\",\r\n  \"published\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4566/restapis/2sb0k24e1a/local/_user_request_/articles/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4566",
+					"path": [
+						"restapis",
+						"2sb0k24e1a",
+						"local",
+						"_user_request_",
+						"articles",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete article by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4566/restapis/2sb0k24e1a/local/_user_request_/articles/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4566",
+					"path": [
+						"restapis",
+						"2sb0k24e1a",
+						"local",
+						"_user_request_",
+						"articles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
