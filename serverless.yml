@@ -16,15 +16,16 @@ custom:
 
 provider:
   name: aws
-  runtime: nodejs18.x
+  runtime: nodejs14.x
+  region: ap-southeast-1
 
-package:
-  exclude:
-    - node_modules/**
+# package:
+#   exclude:
+#     - node_modules/**
 
 functions:
   main:
-    handler: src/main.handler
+    handler: dist/src/serverless.handler
     events:
       - http:
           method: ANY
