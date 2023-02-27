@@ -48,7 +48,7 @@ services:
   #     - 9443:9443
 
   localstack:
-    container_name: "localstack_main"
+    container_name: "nest_localstack"
     image: localstack/localstack
     restart: always
     ports:
