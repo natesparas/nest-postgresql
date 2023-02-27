@@ -29,6 +29,9 @@ aws configure list --profile=default
 echo "########### Migrating Database ############"
 npm run migrate
 # serverless offline
+# npm run start
 
 echo "########### Deploying serverless to localstack ###########"
 serverless deploy --stage local
+
+npm run start

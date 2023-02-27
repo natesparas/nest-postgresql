@@ -18,10 +18,15 @@ provider:
   name: aws
   runtime: nodejs14.x
   region: ap-southeast-1
+  memorySize: 512
+  timeout: 30
 
-# package:
-#   exclude:
-#     - node_modules/**
+package:
+  exclude:
+    - node_modules/**
+    - test/**
+    - src/**
+    - .devcontainer/**
 
 functions:
   main:

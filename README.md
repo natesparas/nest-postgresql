@@ -53,3 +53,10 @@ PATCH : [http://localhost:4566/restapis/5kyphlxqpy/local/_user_request_/articles
 <br>
 
 DELETE : [http://localhost:4566/restapis/5kyphlxqpy/local/_user_request_/articles/:id](http://localhost:4566/restapis/5kyphlxqpy/local/_user_request_/articles/:id)
+
+
+<br>
+
+## Swagger
+
+http://localhost:3000/api
