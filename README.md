@@ -1,73 +1,55 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# serverless-localstack-lambda
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This is a sample project showcasing Devcontainer and AWS Lambda using LocalStack.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<br>
 
-## Description
+The first time you do this, it may take a little while as it needs to build the Docker image. After the first load, each time you open the project, it should be much quicker (Unless you change the Dockerfile).
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+# Running the app
 
-## Installation
+> [!IMPORTANT]
+> Please wait for the container to finish building its dependencies and packages
 
-```bash
-$ npm install
-```
+## Import the postman collection found in the project folder
 
-## Running the app
+After building the container, copy the `endpoint` and paste it on the postman collection variable
 
-```bash
-# development
-$ npm run start
+sample endpoint: http://localhost:4566/restapis/5kyphlxqpy/local/_user_request_
 
-# watch mode
-$ npm run start:dev
 
-# production mode
-$ npm run start:prod
-```
+***********************
+**Postman Calls & Methods**
+***********************
 
-## Test
+GET : [http://localhost:4566/restapis/5kyphlxqpy/local/_user_request_/articles](http://localhost:4566/restapis/5kyphlxqpy/local/_user_request_/articles)
 
-```bash
-# unit tests
-$ npm run test
+<br>
 
-# e2e tests
-$ npm run test:e2e
+POST : [http://localhost:4566/restapis/5kyphlxqpy/local/_user_request_/articles](http://localhost:4566/restapis/5kyphlxqpy/local/_user_request_/articles)
 
-# test coverage
-$ npm run test:cov
-```
+|Body           |
+|---------------|
+|title          |
+|description    |
+|body           |
+|published      |
 
-## Support
+<br>
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+GET : [http://localhost:4566/restapis/5kyphlxqpy/local/_user_request_/articles/:id](http://localhost:4566/restapis/5kyphlxqpy/local/_user_request_/articles/:id)
 
-## Stay in touch
+<br>
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+PATCH : [http://localhost:4566/restapis/5kyphlxqpy/local/_user_request_/articles/:id](http://localhost:4566/restapis/5kyphlxqpy/local/_user_request_/articles/:id)
 
-## License
+|Body           |
+|---------------|
+|title          |
+|description    |
+|body           |
+|published      |
 
-Nest is [MIT licensed](LICENSE).
+<br>
+
+DELETE : [http://localhost:4566/restapis/5kyphlxqpy/local/_user_request_/articles/:id](http://localhost:4566/restapis/5kyphlxqpy/local/_user_request_/articles/:id)
